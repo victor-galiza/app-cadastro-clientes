@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <!-- Inclui o Tailwind CSS via CDN para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-200 antialiased min-h-screen flex flex-col items-center p-4">
+    <div class="bg-gray-800 bg-opacity-70 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-4xl transform transition-all duration-500 border border-gray-700">
+        <div class="text-center mb-4">
+            <h1 class="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-2">Clientes Cadastrados</h1>
+            <p class="text-gray-400 text-sm">Gerencie a sua base de dados de clientes.</p>
+        </div>
+
+        <div class="mb-2 text-center">
+            <a href="{{ url_for('home') }}" class="inline-block bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
+                &larr; Voltar para Cadastro
+            </a>
+        </div>
+
+        {% if clientes %}
+            <div class="overflow-x-auto rounded-lg border border-gray-700 shadow-md">
+                <table class="min-w-full table-auto text-sm text-left text-gray-400">
+                    <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                        <tr>
+                            <th scope="col" class="py-3 px-6 rounded-tl-lg">ID</th>
+                            <th scope="col" class="py-3 px-6">Nome</th>
+                            <th scope="col" class="py-3 px-6">Idade</th>
+                            <th scope="col" class="py-3 px-6">Sexo</th>
+                            <th scope="col" class="py-3 px-6">Email</th>
+                            <th scope="col" class="py-3 px-6 rounded-tr-lg text-right">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray-800 divide-y divide-gray-700">
+                        {% for cliente in clientes %}
+                            <tr class="border-b bg-gray-800 hover:bg-gray-700 transition-colors duration-150">
+                                <td class="py-4 px-6 font-medium text-gray-300">{{ cliente.id }}</td>
+                                <td class="py-4 px-6">{{ cliente.name }}</td>
+                                <td class="py-4 px-6">{{ cliente.age }}</td>
+                                <td class="py-4 px-6">{{ cliente.gender }}</td>
+                                <td class="py-4 px-6">{{ cliente.email }}</td>
+                                <td class="py-4 px-6 text-right space-x-2">
+                                    <a href="{{ url_for('pagina_atualizar_cliente', id=cliente.id) }}" class="inline-block text-cyan-400 hover:text-cyan-300 font-medium">Editar</a>
+                                    <form action="{{ url_for('deletar_cliente', id=cliente.id) }}" method="POST" class="inline-block">
+                                        <button type="submit" class="text-red-400 hover:text-red-300 font-medium">Deletar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p class="text-gray-400 text-center text-lg mt-6">Nenhum cliente cadastrado ainda.</p>
+        {% endif %}
+    </div>
+    <footer class="mt-4 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Victor Galiza. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

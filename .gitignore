@@ -1,0 +1,13 @@
+Ignora a pasta do banco de dados, protegendo seus dados locais.
+database/
+
+Ignora a pasta do ambiente virtual do Python, que é específica da sua máquina.
+venv/
+
+Ignora arquivos temporários e de cache do Python.
+pycache/
+*.pyc
+
+Ignora arquivos de variáveis de ambiente.
+Útil para projetos futuros que usam informações sensíveis.
+.env
