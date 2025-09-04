@@ -2,7 +2,7 @@
 
 Este é um projeto de portfólio que explora a integração entre front-end, back-end e banco de dados em uma aplicação web full-stack. Ele foi construído para ser um estudo de caso prático de um sistema de cadastro de clientes, demonstrando um fluxo completo de desenvolvimento.
 
-![Demonstração do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)
 ![Tecnologia](https://img.shields.io/badge/Front--end-HTML%20%26%20TailwindCSS-blue)
 ![Tecnologia](https://img.shields.io/badge/Back--end-Python%20%26%20Flask-orange)
 ![Tecnologia](https://img.shields.io/badge/Database-SQLite-lightgrey)
