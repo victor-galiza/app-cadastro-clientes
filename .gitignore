@@ -11,3 +11,5 @@ pycache/
 Ignora arquivos de variáveis de ambiente.
 Útil para projetos futuros que usam informações sensíveis.
 .env
+
+desktop.ini
