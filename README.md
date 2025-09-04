@@ -42,20 +42,18 @@ Este projeto foi construído com as seguintes tecnologias:
 
 O projeto está organizado da seguinte forma para garantir a separação de responsabilidades:
 
+```text
 /seu-projeto
-│
-├── /database/
-│   └── clientes.db      # Banco de dados SQLite
-│
-├── /templates/
-│   ├── index.html       # Página de cadastro
-│   ├── clientes.html    # Página de listagem de clientes
-│   └── atualizar.html   # Página para editar um cliente
-│
-├── app.py               # Arquivo principal do Flask (back-end)
-├── .gitignore           # Arquivos e pastas a serem ignorados pelo Git
-└── README.md            # Documentação do projeto
-
+|-- database/
+|   `-- clientes.db
+|-- templates/
+|   |-- index.html
+|   |-- clientes.html
+|   `-- atualizar.html
+|-- app.py
+|-- .gitignore
+`-- README.md
+``` 
 
 ## 💻 Como Executar o Projeto Localmente
 
