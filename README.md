@@ -70,8 +70,7 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone [https://github.com/victor-galiza/app-cadastro-clientes.git](https://github.com/victor-galiza/app-cadastro-clientes.git)
     ```
 
 2.  **Crie a estrutura de pastas:**
