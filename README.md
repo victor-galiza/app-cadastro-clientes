@@ -43,7 +43,7 @@ Este projeto foi construído com as seguintes tecnologias:
 O projeto está organizado da seguinte forma para garantir a separação de responsabilidades:
 
 ```text
-/seu-projeto
+/Cadastro Clientes
 |-- database/
 |   `-- clientes.db
 |-- templates/
